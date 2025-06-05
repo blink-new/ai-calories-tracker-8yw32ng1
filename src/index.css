@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 250 252;
+    --foreground: 15 23 42;
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+    --primary: 132 204 22;
+    --primary-foreground: 255 255 255;
+    --secondary: 241 245 249;
+    --secondary-foreground: 15 23 42;
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
+    --accent: 240 253 244;
+    --accent-foreground: 22 163 74;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 132 204 22;
+    --chart-1: 132 204 22;
+    --chart-2: 34 197 94;
+    --chart-3: 101 163 13;
+    --chart-4: 74 222 128;
+    --chart-5: 187 247 208;
+    --radius: 0.75rem;
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 15 23 42;
+    --sidebar-primary: 132 204 22;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 240 253 244;
+    --sidebar-accent-foreground: 22 163 74;
+    --sidebar-border: 226 232 240;
+    --sidebar-ring: 132 204 22;
+  }
+
+  .dark {
+    --background: 2 6 23;
+    --foreground: 248 250 252;
+    --card: 15 23 42;
+    --card-foreground: 248 250 252;
+    --popover: 15 23 42;
+    --popover-foreground: 248 250 252;
+    --primary: 132 204 22;
+    --primary-foreground: 255 255 255;
+    --secondary: 30 41 59;
+    --secondary-foreground: 248 250 252;
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;
+    --accent: 22 78 99;
+    --accent-foreground: 240 253 244;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 30 41 59;
+    --input: 30 41 59;
+    --ring: 132 204 22;
+    --chart-1: 132 204 22;
+    --chart-2: 34 197 94;
+    --chart-3: 101 163 13;
+    --chart-4: 74 222 128;
+    --chart-5: 187 247 208;
+    --sidebar-background: 15 23 42;
+    --sidebar-foreground: 248 250 252;
+    --sidebar-primary: 132 204 22;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 30 41 59;
+    --sidebar-accent-foreground: 248 250 252;
+    --sidebar-border: 30 41 59;
+    --sidebar-ring: 132 204 22;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom animations for health app feel */
+@keyframes pulse-green {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes progress-fill {
+  from {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.animate-pulse-green {
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+.animate-progress-fill {
+  animation: progress-fill 1.5s ease-out forwards;
+}
+
+/* Glassmorphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-green {
+  background: rgba(132, 204, 22, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(132, 204, 22, 0.2);
+}
