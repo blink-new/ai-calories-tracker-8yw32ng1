@@ -1,20 +1,6 @@
 import React from 'react';
 
-interface Meal {
-  id: string;
-  name: string;
-  calories: number;
-  imageUrl?: string;
-  notes?: string;
-  timestamp: Date;
-}
-
-interface AnalyticsProps {
-  meals: Meal[];
-  dailyGoal: number;
-}
-
-const Analytics: React.FC<AnalyticsProps> = ({ meals, dailyGoal }) => {
+const Analytics: React.FC = () => {
   // Placeholder for analytics content
   return (
     <div className="p-4 text-center">

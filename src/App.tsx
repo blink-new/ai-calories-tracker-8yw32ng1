@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Camera, Home, BarChart3, Settings } from 'lucide-react';
 import { Button } from './components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
-import { Progress } from './components/ui/progress';
 import Dashboard from './components/Dashboard';
 import CameraCapture from './components/CameraCapture';
 import Analytics from './components/Analytics';
